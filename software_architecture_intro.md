@@ -27,7 +27,7 @@ video: 11:21
 
 - Functional value: what it does for the user right now
   - The features to achieve the what the business wants
-    - what the business wants?
+    - what the business wants? [for more in_depth business needs, check `business_needs_questions`]
       - Important: each software has a "different" need according to the context it's inserted
       - if you're not Netflix, creating a software similar to netflix, likely is a bad idea
         - In 2018, Netflix would attent 1M requests per second. If your software doesn't have this, why would you create something following netflix architecture?
@@ -37,6 +37,15 @@ video: 11:21
 - Architectural value: how easily it can change tomorrow
 - In the book clean architecture, Robert C. Martin argues that the "architecture" (the ability to change) is more valuable than the "features" (the current functions)
   - If a program works perfectly, but it can't be changes, it becomes useless the moment the world changes
+
+> The software responsing the requests within a given time span within a given percentage expresses its quality
+
+### Thinking of trade-offs
+
+- Trade-offs mean that **every architectural decision opmitimizes for something at the cost of something else**
+
+- What you increase availability (horizontal scale), you also increase the area of surface for attacks (reduced security)
+  - increased avalability = reduced security
 
 ## The role
 
