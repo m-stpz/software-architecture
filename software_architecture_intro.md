@@ -25,27 +25,38 @@ video: 11:21
 
 ### The value of software
 
-- Functional value: what it does for the user right now
-  - The features to achieve the what the business wants
-    - what the business wants? [for more in_depth business needs, check `business_needs_questions`]
-      - Important: each software has a "different" need according to the context it's inserted
-      - if you're not Netflix, creating a software similar to netflix, likely is a bad idea
-        - In 2018, Netflix would attent 1M requests per second. If your software doesn't have this, why would you create something following netflix architecture?
-          - Their architecture work like that due to the demands they have
-    - respecting restrictions
-    - achieving parameters in relation to quality
-- Architectural value: how easily it can change tomorrow
+### Functional value: what it does for the user right now
+
+- The features to achieve the what the business wants
+  - what the business wants? [for more in_depth business needs, check `business_needs_questions`]
+    - Important: each software has a "different" need according to the context it's inserted
+  - achieving parameters in relation to quality
+  - respecting restrictions
+
+- if you're not Netflix, creating a software similar to netflix, likely is a bad idea
+- In 2018, Netflix would attent 1M requests per second. If your software doesn't have this, why would you create something following netflix architecture?
+  - Their architecture work like that due to the demands they have
+
+### Architectural value: how easily it can change tomorrow
+
 - In the book clean architecture, Robert C. Martin argues that the "architecture" (the ability to change) is more valuable than the "features" (the current functions)
   - If a program works perfectly, but it can't be changes, it becomes useless the moment the world changes
 
 > The software responsing the requests within a given time span within a given percentage expresses its quality
 
-### Thinking of trade-offs
+- When taking a decision, you must know what's the cost you're paying
+  - What are the consequences of my decision?
 
-- Trade-offs mean that **every architectural decision opmitimizes for something at the cost of something else**
+- Important: for a business it's important, "I need this feature on prod until this day" (window of opportunity)
 
-- What you increase availability (horizontal scale), you also increase the area of surface for attacks (reduced security)
-  - increased avalability = reduced security
+> The life of a real software begins, when it enters production
+
+### Technical debt
+
+- When we take "less" optimal solutions in order to achieve certain deadlines, however, debt generates interest
+- If you don't know to explain why your suggestion solves a real problem, likely it doesn't solve any problem
+  - Then, it's only your opinion
+  - Propose solutions to real-problems, otherwise, keep quiet
 
 ## The role
 
