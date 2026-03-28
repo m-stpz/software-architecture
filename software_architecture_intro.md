@@ -20,6 +20,24 @@ video: 11:21
   - mentor others
   - ensure company isn't building technical dbt that will bankrupt the engineering team later
 
+- What defines the value of a software?
+  - Meaning, what are the characteristics that make a valuable software?
+
+### The value of software
+
+- Functional value: what it does for the user right now
+  - The features to achieve the what the business wants
+    - what the business wants?
+      - Important: each software has a "different" need according to the context it's inserted
+      - if you're not Netflix, creating a software similar to netflix, likely is a bad idea
+        - In 2018, Netflix would attent 1M requests per second. If your software doesn't have this, why would you create something following netflix architecture?
+          - Their architecture work like that due to the demands they have
+    - respecting restrictions
+    - achieving parameters in relation to quality
+- Architectural value: how easily it can change tomorrow
+- In the book clean architecture, Robert C. Martin argues that the "architecture" (the ability to change) is more valuable than the "features" (the current functions)
+  - If a program works perfectly, but it can't be changes, it becomes useless the moment the world changes
+
 ## The role
 
 - The role is about vision, communication, and risk management
@@ -31,6 +49,8 @@ video: 11:21
 | risk mitigation  | identifying "hidden" dangers early (e.g, security gaps, scaling limits)     |
 | standardization  | ensuring all teams follow the same patterns, so the system remains cohesive |
 | bridge building  | translating business requirements into technical specs for devs             |
+
+- In some teams, the architect, creates the plan, but doesn't stay with the team. This creates more problems than solutions. Ideally, the architect is close to the development
 
 ### What it does
 
