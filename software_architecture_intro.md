@@ -76,15 +76,6 @@ video: 11:21
 - A software system must continuously change to keep it relevant
 - Software that doesn't change is software that is irrelevant
 
-##### Accelerate: The science of lean software and devops
-
-4 metrics for high-performing teams:
-
-1. Lead time for changes: time from commit to production
-2. Deployment frequency: how often you deploy to production
-3. Change failure rate: % of deployments causing failure
-4. Mean time to restore (MTTR): how quickly your recover from failures
-
 ## The role
 
 - The role is about vision, communication, and risk management
