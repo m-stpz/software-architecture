@@ -51,12 +51,39 @@ video: 11:21
 
 > The life of a real software begins, when it enters production
 
+- Software becomes more challeging to be changed as time passes by
+- Software has value when it achieves business need at a specified quality time and also when it can be maintained/expanded without reducing this established quality
+- Software engineering takes care of software development throughout time
+  - software architecture is a discipline of software engineering, it's part of the effort to maintain the software through time
+  - software architecture is fundamental so the software evolves/maintains its value throughout time
+
+> We've long believed that when the rate of change inside an institution becomes slower than the change outside, the end is in sight. The only question is when. Jack Welch
+
+- To change is to keep the business afloat
+- When an organization loses the capacity to change as fast as its surrounding market, it rots
+
 ### Technical debt
 
 - When we take "less" optimal solutions in order to achieve certain deadlines, however, debt generates interest
 - If you don't know to explain why your suggestion solves a real problem, likely it doesn't solve any problem
   - Then, it's only your opinion
   - Propose solutions to real-problems, otherwise, keep quiet
+
+### What's the biggest threat for the value of the software?
+
+#### 1st Lehman Law: Continuous change = keeping software relevant
+
+- A software system must continuously change to keep it relevant
+- Software that doesn't change is software that is irrelevant
+
+##### Accelerate: The science of lean software and devops
+
+4 metrics for high-performing teams:
+
+1. Lead time for changes: time from commit to production
+2. Deployment frequency: how often you deploy to production
+3. Change failure rate: % of deployments causing failure
+4. Mean time to restore (MTTR): how quickly your recover from failures
 
 ## The role
 
