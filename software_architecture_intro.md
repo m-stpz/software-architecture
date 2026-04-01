@@ -167,3 +167,29 @@ Architecture = decisions that are hard to change & shape everything else
   - restrictions respect
   - achieval of quality attributes throughout time
   - reducing risk and cost
+
+- Selecting the technology isn't as architectural as thinking about the criteria we're using to select the technology
+
+```
+Start
+  ⬇️
+Orchestrate the elaboration of an architectural design proposal
+  ⬇️
+Evaluate the proposal         <-  Clarity what can be improved
+  ⬇️                                     ⬆️ No
+- Does it satisfy business demands?
+  ⬇️ Yes                                 ⬆️ No
+- Does it comply with constraints?
+  ⬇️ Yes                                 ⬆️ No
+- Does it meet the quality attributes?
+  ⬇️ Yes                                 ⬆️ No
+- Is there a cheaper or less risky option?
+  ⬇️ No                                  ⬆️ Yes
+Prepare implementation
+  ⬇️
+  End
+```
+
+> Organizations that develop software tend to produce systems that are a copy of the communication structures of these companies. Melvin Conway
+
+- The way teams are structured influence on how software is structured
