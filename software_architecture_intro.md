@@ -23,20 +23,6 @@ video: 11:21
 - What defines the value of a software?
   - Meaning, what are the characteristics that make a valuable software?
 
-## The role
-
-- The role is about vision, communication, and risk management
-- Bridges the gap between high-level business goals and low-level technical implementation
-
-| Category         | Responsibility                                                              |
-| ---------------- | --------------------------------------------------------------------------- |
-| technical vision | define the "north start" for: tech stack, frameworks, and patterns          |
-| risk mitigation  | identifying "hidden" dangers early (e.g, security gaps, scaling limits)     |
-| standardization  | ensuring all teams follow the same patterns, so the system remains cohesive |
-| bridge building  | translating business requirements into technical specs for devs             |
-
-- In some teams, the architect, creates the plan, but doesn't stay with the team. This creates more problems than solutions. Ideally, the architect is close to the development
-
 ### What it does
 
 1. Designing "non-functional" requirements
@@ -193,3 +179,30 @@ Prepare implementation
 > Organizations that develop software tend to produce systems that are a copy of the communication structures of these companies. Melvin Conway
 
 - The way teams are structured influence on how software is structured
+
+## What's the role of a software architect?
+
+- The role is about vision, communication, and risk management
+- Bridges the gap between high-level business goals and low-level technical implementation
+
+| Category         | Responsibility                                                              |
+| ---------------- | --------------------------------------------------------------------------- |
+| technical vision | define the "north start" for: tech stack, frameworks, and patterns          |
+| risk mitigation  | identifying "hidden" dangers early (e.g, security gaps, scaling limits)     |
+| standardization  | ensuring all teams follow the same patterns, so the system remains cohesive |
+| bridge building  | translating business requirements into technical specs for devs             |
+
+- In some teams, the architect, creates the plan, but doesn't stay with the team. This creates more problems than solutions. Ideally, the architect is close to the development
+
+- An architect is, before everything, an orchestrator
+  - Talk with the team
+    - Satisfies business demands?
+    - Complies with constraints?
+    - Meets quality attributes?
+  - Beyond software skills, it's important people skill
+- The architect ensures decisions are:
+  - made
+  - justified
+  - communicated & repeated
+  - remembered
+  - respected
