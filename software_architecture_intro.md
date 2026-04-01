@@ -23,7 +23,46 @@ video: 11:21
 - What defines the value of a software?
   - Meaning, what are the characteristics that make a valuable software?
 
-### The value of software
+## The role
+
+- The role is about vision, communication, and risk management
+- Bridges the gap between high-level business goals and low-level technical implementation
+
+| Category         | Responsibility                                                              |
+| ---------------- | --------------------------------------------------------------------------- |
+| technical vision | define the "north start" for: tech stack, frameworks, and patterns          |
+| risk mitigation  | identifying "hidden" dangers early (e.g, security gaps, scaling limits)     |
+| standardization  | ensuring all teams follow the same patterns, so the system remains cohesive |
+| bridge building  | translating business requirements into technical specs for devs             |
+
+- In some teams, the architect, creates the plan, but doesn't stay with the team. This creates more problems than solutions. Ideally, the architect is close to the development
+
+### What it does
+
+1. Designing "non-functional" requirements
+
+- While devs focus on features (what the app does), the architect focuses on the "-ilities"
+  - scalability: can it handle increased traffic?
+  - reliability: can it handle server fail?
+  - maintainability: can a hire understand this in a week?
+  - security: is the data protected at every layer?
+
+2. Evaluating "build vs. buy": should we build it or use a 3rd-party solution?
+3. Defining boundaries: how different portions talk to each other
+
+- Rest or GraphQL?
+- Monolith or microservices?
+
+### How do they spend their time?
+
+- 30% technical design & documentation: Writing RFCs and ADRs
+- 25% meetings & stakeholder management: talking to product managers to understand future needs and talking with executives to explain why a "complete rewrite" might (not) be necessary
+- 20% code review & mentoring: might not write much production code, but they review critical PRs to ensure the architecture is being followed
+  - Act as a "level up" for senior developers
+- 15% Prototyping (PoCs): builds a small "toy" version of the feature
+- 10% firefighting
+
+## The value of software
 
 ### Functional value: what it does for the user right now
 
@@ -69,48 +108,62 @@ video: 11:21
   - Then, it's only your opinion
   - Propose solutions to real-problems, otherwise, keep quiet
 
-### What's the biggest threat for the value of the software?
+### Lehman Laws
 
-#### 1st Lehman Law: Continuous change = keeping software relevant
+#### 1st Continuous change = keeping software relevant
 
 - A software system must continuously change to keep it relevant
 - Software that doesn't change is software that is irrelevant
 
-## The role
+#### 2nd Expanding complexity is bounded my explicit effort
 
-- The role is about vision, communication, and risk management
-- Bridges the gap between high-level business goals and low-level technical implementation
+- New functionality/features increase the software complexity, except when there are explicit effort to reduce this complexity
 
-| Category         | Responsibility                                                              |
-| ---------------- | --------------------------------------------------------------------------- |
-| technical vision | define the "north start" for: tech stack, frameworks, and patterns          |
-| risk mitigation  | identifying "hidden" dangers early (e.g, security gaps, scaling limits)     |
-| standardization  | ensuring all teams follow the same patterns, so the system remains cohesive |
-| bridge building  | translating business requirements into technical specs for devs             |
+> What is legacy software? When a team's necessity to have technical debt is bigger than they available capacity to solve old debts
 
-- In some teams, the architect, creates the plan, but doesn't stay with the team. This creates more problems than solutions. Ideally, the architect is close to the development
+- My software needs to be set up in a way that introducing new changes is cheap
 
-### What it does
+### Why software architecture is important?
 
-1. Designing "non-functional" requirements
+1. Increase the value of a software by making it easier to adapt
+2. Combating complexity, applying agility
 
-- While devs focus on features (what the app does), the architect focuses on the "-ilities"
-  - scalability: can it handle increased traffic?
-  - reliability: can it handle server fail?
-  - maintainability: can a hire understand this in a week?
-  - security: is the data protected at every layer?
+- By applying good software architecture practices, we enable/facilitate its agility
 
-2. Evaluating "build vs. buy": should we build it or use a 3rd-party solution?
-3. Defining boundaries: how different portions talk to each other
+### Architecture vs. Design
 
-- Rest or GraphQL?
-- Monolith or microservices?
+> Architecture is always about design, however, design isn't always architectural
 
-### How do they spend their time?
+- Distinction: significance and scope
 
-- 30% technical design & documentation: Writing RFCs and ADRs
-- 25% meetings & stakeholder management: talking to product managers to understand future needs and talking with executives to explain why a "complete rewrite" might (not) be necessary
-- 20% code review & mentoring: might not write much production code, but they review critical PRs to ensure the architecture is being followed
-  - Act as a "level up" for senior developers
-- 15% Prototyping (PoCs): builds a small "toy" version of the feature
-- 10% firefighting
+#### Architecture: hard to change and impact everything else
+
+Architecture = decisions that are hard to change & shape everything else
+
+- Structural choices that constrain all the design below them
+- Microservices vs. monolith
+- Sync vs. event-driven communication
+- Data storage strategy
+- Defining system boundaries and how modules interact
+
+- Every architectural decision is a design decision: you're choosing how to structure something
+
+#### Design: local, easy to change, and don't ripple across the system
+
+- Naming a variable
+- Choosing a loop vs. a map
+- Deciding whether a helper func is private or public
+- One UI layout over another
+
+|                               | Architectural                  | Non-architectural design        |
+| ----------------------------- | ------------------------------ | ------------------------------- |
+| Scope                         | system-wide                    | local: module/class             |
+| Cost to change                | high: significant rework       | low: quick refactor             |
+| Affect other teams/components | usually yes                    | usually no                      |
+| Example                       | "we use REST between services" | "This function returns a tuple" |
+
+- Software architecture deals with the design aspects that ensure:
+  - achieval of objectives
+  - restrictions respect
+  - achieval of quality attributes throughout time
+  - reducing risk and cost
