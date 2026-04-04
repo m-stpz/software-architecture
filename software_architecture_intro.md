@@ -134,6 +134,11 @@ Architecture = decisions that are hard to change & shape everything else
 
 - Every architectural decision is a design decision: you're choosing how to structure something
 
+> For every problem, there's a single, elegant solution, which is completely mistaken
+
+- There's no easy answer. You need to develop your repertoire
+- The most skilled devs aren't the ones that necessarily provide all the answers, but make the correct questions
+
 #### Design: local, easy to change, and don't ripple across the system
 
 - Naming a variable
@@ -218,19 +223,41 @@ Prepare implementation
 
 ## Software architecture vs. System Design
 
-- Software architecture: focuses on the internal structure of a software system
-  - how code is organized into components, modules, and layers and how they interact
-  - it deals with:
-    - design patterns (mvc, hexagonal, clean architecture)
-    - module boundaries and dependencies
-    - quality attributes (-ities: maintainability, testability, security, extensibility)
-    - technology-agnostic structural decisions
+### Software architecture
 
-- System design: focuses on the infrastructure and distributed components that make the system work at scale
-  - it deals with:
-    - load balancers, caches, dbs, message queues
-    - horizontal scaling, replication, sharding
-    - network protocols and API design
+Focuses on the internal structure of a software system
+
+- how code is organized into components, modules, and layers and how they interact
+- it deals with:
+  - design patterns (mvc, hexagonal, clean architecture)
+  - module boundaries and dependencies
+  - quality attributes (-ities: maintainability, testability, security, extensibility)
+  - technology-agnostic structural decisions
+
+#### Books
+
+- Clean architecture: principles of component design and dependency management
+- Fundamentals of software architecture: Broad survey of architecture styles and the architect's role
+- Designing data-intensive applications: briges architecture and system design [arguably the single most important book]
+- Patterns of enterprise application architecture: classic catalog of architecture patterns
+- A philosophy of software design: deep vs shallow modules, complexity management
+- Software architecture: the hard parts: tradeoff analysis for distributed architectures
+- Domain-driven design: aligning architecture with business domains
+
+### System design
+
+Focuses on the infrastructure and distributed components that make the system work at scale
+
+- it deals with:
+  - load balancers, caches, dbs, message queues
+  - horizontal scaling, replication, sharding
+  - network protocols and API design
+
+#### Books
+
+- Desining data-intensive applications: again, it's that important
+- System design interview: practical walkthroughs of real-world systems
+- Building microservices: distributed system patterns and pitfalls
 
 Architecture = how you structure your code
 System design = how you structure your infra and distributed services
