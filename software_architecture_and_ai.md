@@ -13,3 +13,19 @@
 - The architect's role gets more important, not less
   - If Junior + AI can produce features at senior speed, the bottleneck moves up the chain
   - Juniors solve tasks -> seniors solve features -> architects solve systems
+
+## What we must understand
+
+- Current context
+  - The world of software architecture before and after AI
+  - The new profile of developers
+  - The new role of the architect
+  - The new generation of applications directed by AI
+
+- AI agents and communication protocols
+- Design patterns with AI
+- Caching
+- Security
+- Context engineering and Prompt engineering
+- Tests and quality in systems with AI
+- Cost control in architectures with AI

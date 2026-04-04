@@ -220,6 +220,7 @@ Prepare implementation
   - It's important to develop repertoire
 - Good selling
   - Selling your idea is always important
+- Resources you have, but don't use, are costs
 
 ## Software architecture vs. System Design
 
