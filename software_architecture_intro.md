@@ -206,3 +206,31 @@ Prepare implementation
   - communicated & repeated
   - remembered
   - respected
+
+## Some career tips
+
+- Decide fast
+  - And keep on the path
+- Right execution
+  - It's important to develop repertoire
+- Good selling
+  - Selling your idea is always important
+
+## Software architecture vs. System Design
+
+- Software architecture: focuses on the internal structure of a software system
+  - how code is organized into components, modules, and layers and how they interact
+  - it deals with:
+    - design patterns (mvc, hexagonal, clean architecture)
+    - module boundaries and dependencies
+    - quality attributes (-ities: maintainability, testability, security, extensibility)
+    - technology-agnostic structural decisions
+
+- System design: focuses on the infrastructure and distributed components that make the system work at scale
+  - it deals with:
+    - load balancers, caches, dbs, message queues
+    - horizontal scaling, replication, sharding
+    - network protocols and API design
+
+Architecture = how you structure your code
+System design = how you structure your infra and distributed services
