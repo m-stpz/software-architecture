@@ -50,8 +50,29 @@
 
 ### 5. Security
 
+- Jailbreaking
+- Prompt injections
+- Guardrails
+- Sensitive data protection
+- OWASP Top 10 LLM and Gen AI
+
 ### 6. Context engineering and Prompt engineering
 
-### 7. Tests and quality in systems with AI
+- Prompt engineering
+- Context engineering for large scale application development
+- Prompt versioning and iterations history
 
-### 8. Cost control in architectures with AI
+### 7. System design and distributed systems with AI
+
+- Principles of system design with AI
+- Scale: performance, cost and quality
+- Pipelines, messages and streaming
+- Vector db (pinecone)
+- Compatibility between embedding versions
+- RAG Architecture
+- Cloud providers and key services
+- Observability
+
+### 8. Tests and quality in systems with AI
+
+### 9. Cost control in architectures with AI
