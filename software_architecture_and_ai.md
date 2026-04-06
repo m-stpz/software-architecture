@@ -16,16 +16,42 @@
 
 ## What we must understand
 
-- Current context
-  - The world of software architecture before and after AI
-  - The new profile of developers
-  - The new role of the architect
-  - The new generation of applications directed by AI
+### 1. Current context
 
-- AI agents and communication protocols
-- Design patterns with AI
-- Caching
-- Security
-- Context engineering and Prompt engineering
-- Tests and quality in systems with AI
-- Cost control in architectures with AI
+- The world of software architecture before and after AI
+- The new profile of developers
+- The new role of the architect
+- The new generation of applications directed by AI
+
+### 2. AI agents and communication protocols
+
+- Software, microservices vs AI agents
+- AI agents architectures
+- Agents orchestration
+- MCP (Model Context Protocol) and transportation methods
+- A2A (agent to agent)
+- New protocols initiatives
+- Evaluation
+
+### 3. Design patterns with AI
+
+- Systems and agents design patterns
+- Security design patterns
+- 12 factors agents
+
+### 4. Caching
+
+- Basic concepts of caching
+- Invalidation (TTL, Cache-aside, Write-through, etc)
+- Eviction policies: LRU, LFU, FIFO, MRU, Random replacement
+- Token caching in LLMS
+- Context caching and embeddings in applications with RAG
+- Cache-aware prompts and fingerprint control for answers
+
+### 5. Security
+
+### 6. Context engineering and Prompt engineering
+
+### 7. Tests and quality in systems with AI
+
+### 8. Cost control in architectures with AI
