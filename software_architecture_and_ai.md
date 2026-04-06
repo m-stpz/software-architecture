@@ -67,7 +67,7 @@
 - Principles of system design with AI
 - Scale: performance, cost and quality
 - Pipelines, messages and streaming
-- Vector db (pinecone)
+- Vector db (e.g., pinecone)
 - Compatibility between embedding versions
 - RAG Architecture
 - Cloud providers and key services
@@ -75,4 +75,17 @@
 
 ### 8. Tests and quality in systems with AI
 
+- Prompt and context testing
+- Agent evaluation com real and syntetic datasets
+- Snapshot testing for answers validation
+- Deterministic testing and strategies for non-deterministic LLMs
+- Main tools (e.g., langsmith)
+
 ### 9. Cost control in architectures with AI
+
+- Understanding input and output tokens and model limits
+- Caching strategies for reducing repeated calls
+- Calculators and tools to estimate cost
+- Logging and AI-usage monitoring (per user, prompt or agent)
+- Prompt optimization and smart truncking
+- Model choice based on cost x quality x latency
