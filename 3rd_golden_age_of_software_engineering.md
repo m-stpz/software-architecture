@@ -10,7 +10,7 @@ As with other engineerings, which balance external and internal forces to build 
 - We can't build anything software solution larger than what the hardware handles (hardware limitation)
 - Can I get enough people to do what I need to do? (human limitation)
 
-## The 1st golden age of software engineering: Software being decoupled from hardware
+## The 1st golden age (of software engineering): Algorithms | 40s to 70s
 
 > 1st golden age: Software becoming an industry into itself
 
@@ -43,7 +43,7 @@ late 40's to late 70's
   - Software has much to thank to the cold war
 - Software is a dynamic, fluid, fungible domain
 
-## The software crisis
+### The software crisis
 
 - on NATO meeting, there were the description that:
   - we need more software, but can't produce it enough at the necessary speed
@@ -51,3 +51,39 @@ late 40's to late 70's
 - We needed not only algorithmic abstraction, but object abstractions
 
 > Plato: One character said "we should at the world in terms of its processes". The other said "we should look at them through things"
+
+- In programming, this boils down to looking at the world not through processes [algorithms], but through objects and classes
+
+## The 2nd golden age: Object-oriented abstractions | 70s to 2000s
+
+- Late 80s
+- Object-oriented programming/design
+- We approach the world at a different layer of abstraction
+- Approaching the complexity of developing software through an object-oriented way allowed us to build awesome stuff
+- Rise of operating systems, open-source software, platforms [e.g., aws, salesforce], and internet
+  - platform: castles defended by the moat around them
+    - the cost of you doing it yourself, it makes sense for you to buy from us
+- It was in this period that software became woven into the fabric of civilization
+- Computers were in the hands of individuals and demand increased
+
+### Y2K and dotcom crash
+
+- Y2K (the year 2000 problem) was a widespread computer programming glitch anticipated for jan.1, 2000
+  - where systems using two digits for the year ("99") might misinterpret "00" as 1900 instead of 2000
+
+### AI golden ages
+
+- the first golden age of AI was in the 40s and 50s: initial concepts of neural networks, but we were computationally limited
+- the second golden age was in the 80s: the beginnings of machine learning
+
+## The 3rd golden age: systems | turn of the millenium
+
+- Libraries (another level of abstraction)
+- from simple programs to subcomponents of systems
+- AI nowadays is a kind of "reaction" to the growth of these momentum
+- Now, we have so much software. How do we manage it?
+  - safety and security
+    - how to prevent the bad guys?
+- We now have "too big to fail" companies
+  - what would happen if microsoft, or google, went under?
+  - they have such an important civilizational and economic importance that it's hard to imagine
