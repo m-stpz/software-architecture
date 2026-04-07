@@ -36,3 +36,18 @@ late 40's to late 70's
   - weather forecasting
   - defense systems
     - there was the need to create distributed systems of real-time nature
+
+> There are two major influences in the history of computing: commerce & warfare
+
+- Much of modern computing is woven upon the loom of sorrow
+  - Software has much to thank to the cold war
+- Software is a dynamic, fluid, fungible domain
+
+## The software crisis
+
+- on NATO meeting, there were the description that:
+  - we need more software, but can't produce it enough at the necessary speed
+  - growing complexity was hard to tackle
+- We needed not only algorithmic abstraction, but object abstractions
+
+> Plato: One character said "we should at the world in terms of its processes". The other said "we should look at them through things"
