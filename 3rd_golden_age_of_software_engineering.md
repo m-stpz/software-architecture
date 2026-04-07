@@ -87,3 +87,41 @@ late 40's to late 70's
 - We now have "too big to fail" companies
   - what would happen if microsoft, or google, went under?
   - they have such an important civilizational and economic importance that it's hard to imagine
+
+### The future of software engineers
+
+- Existential crisis given that AI can now write really good code
+- Coding has been so deeply tied to software engineering. Will it continue being so?
+- This is not the first existential crisis developers have faced
+  - 1st and 2nd generation
+    - 1st gen: the invention of compilers
+    - 2nd gen: the invention of FORTRAN
+  - focus on the fundamentals
+- we're moving up a level on the abstraction level once again
+  - machine language -> assembly -> higher-order programming languages -> libraries -> AI as a language interface
+  - lower ----------------------------------- abstraction-level --------------------------------------- higher
+- Hobbyist moment, similar to the past. Building things that you think are fun
+  - personal, throwaway software will flourish
+  - software is being expanded
+- The fundamentals remain, the tools change
+  - your tools are changing, but your problems are not
+
+### New skills needed
+
+- What will become obsolete?
+- What will become more important?
+  - Instead of dealing with programs and apps, we're dealing with systems
+  - Manage complexity at scale
+  - Human and technical skills
+
+#### Resources
+
+- Systems theory
+  - Sciences of the artificial
+  - Society of mind
+- Complexity and systems
+
+#### How to thrive during periods of change
+
+- The power of imagination
+- Using the resources available
