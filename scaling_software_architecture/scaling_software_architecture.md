@@ -122,8 +122,14 @@ Web server -> Cache -> DB
 
 - Replication of data across different data centers isn't an insignificant task
 
-### Message brokers
+## Solution 6: Message brokers
 
+- Instead of hanging on a given request, we forward the request to a message broker that will process this information asynchronously
+- This way we don't hang the message
+
+## Solution 7: Add loggging, metrics, monitoring, automation
+
+- CI/CD pipeline for automated deployment
 
 ## To sum up: Scaling an application
 
@@ -134,6 +140,7 @@ Web server -> Cache -> DB
    - resolves:
    - single point of failure
      - we have redundance | we add failover
+   - having auto scale: increase/reduce servers on demand
 3. database replication
    - master/slave
      - master: write operations [insert/update/delete]
@@ -141,3 +148,11 @@ Web server -> Cache -> DB
      - most web-apps are read-heavy
    - introduces consistency reflections
 4. caching layer
+   - heavier operations are fetched from RAM memory
+   - faster performance
+5. having multiple data centers
+   - data centers in different places increase failover
+6. message brokers
+   - adding async operations to requests
+   - avoids server/operations hanging
+7. automation, logging, metrics, monitoring
