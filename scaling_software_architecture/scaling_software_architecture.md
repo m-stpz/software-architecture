@@ -61,6 +61,18 @@
 
 Check: 01_load_balancer_nginx.md
 
+#### Auto scaling
+
+- Also, by having multiple servers, the question is, how will these servers be provisioned?
+  - manual or automatic provision?
+  - if the load increases, how will we add more servers?
+  - if the load decreses, how will we reduce the servers?
+    - auto scale
+
+- You pay for what you use
+
+![alt text](image-1.png)
+
 ### Issues with this implementation
 
 - If we scale the api servers horizontally, we have replicas for our application servers, however, our db server is is one server. Then, we still have the single point of failure issue
@@ -82,6 +94,37 @@ Check: 01_load_balancer_nginx.md
 
 > Check 02_db_replication_master_slave.md
 
+![alt text](image.png)
+
+- As we start having more dbs, we need to think about consistency
+- Eventual consistency
+- Strong consistency
+- Weak consistency
+
+### Issues with this implementation
+
+- Consistency can be an issue. We need to identify how we want this consistency: eventual, strong, weak
+- More complex setup
+
+## Solution 4: Caching layer
+
+Web server -> Cache -> DB
+
+- If data exists in cache, read from cache
+- If data doesn't exist in cache, read from db and save to cache
+- Return data to the web server
+- Cache runs on the RAM memory
+
+## Solution 5: Data centers
+
+- One common issue is the single point of failure. So, even though we have multiple api and db servers, if they are located in the same region [same data center], we're still exposed to a single point of failure
+- We add stuff to our architecture to solve some problems, but by doing that we add problems of a different nature or of a similar nature, but in a different scale. There's always trade offs
+
+- Replication of data across different data centers isn't an insignificant task
+
+### Message brokers
+
+
 ## To sum up: Scaling an application
 
 1. separating application log [api] from db
@@ -91,3 +134,10 @@ Check: 01_load_balancer_nginx.md
    - resolves:
    - single point of failure
      - we have redundance | we add failover
+3. database replication
+   - master/slave
+     - master: write operations [insert/update/delete]
+     - slave: read operation [select]
+     - most web-apps are read-heavy
+   - introduces consistency reflections
+4. caching layer
