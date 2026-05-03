@@ -54,7 +54,7 @@ https://www.youtube.com/watch?v=SHkbPm1Wrno
   - not supported by browsers by default
   - best for: streaming, video conferencing, multiplayer games
 
-### Layer 7: Application layer (HTTP)
+### Layer 7: Application layer (HTTP - REST, GraphQL, gRPC)
 
 #### HTTP
 
@@ -86,3 +86,47 @@ Content-Length:
   //...
 }
 ```
+
+#### REST Api
+
+- The most common way to build APIs on top of HTTP
+  - a way to organize API around verbs and URLs
+  - thinking in terms of resource update
+- We use the:
+  - HTTP methods/verbs: to describe what we're doing
+  - Resources: URLs associated with it
+- The default in building APIs
+
+```bash
+# method + resource
+GET /users/{id} -> User
+  # returns a json with the information of the given user
+
+POST /users -> User
+# body of request
+{
+  "username":"example",
+  "email":"johndoe@email.com",
+}
+```
+
+- Some developers find this organization counterintuivie because they're used to thinking in terms of function-calls
+  - operational thinking
+
+#### GraphQL
+
+- REST might need multiple calls to the server to load a given resource, e.g, a web page. This can present some overhead
+- REST can cause over/underfetching depending on the context
+- GraphQL basically allows the frontend to describe the shape of data it needs
+  - The backend then decides how to it can grab that data
+  - Instead of focusing on "resources" (REST), we describe exactly the shape I need for given context
+- GraphQL is useful when:
+  - frontend requirements change a lot
+  - multiple backend/frontend teams
+    - this way, the frontend becomes less dependent on an API implementation of the backend
+
+- In system design interviews, usually REST is the best choice. Opt for GraphQL if:
+  - change of requirements is mentioned explicitly
+  - you want to design a system that explicitly supports this arbitrary queries
+
+#### gRPC = Protobufs + Servies
