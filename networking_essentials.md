@@ -129,4 +129,82 @@ POST /users -> User
   - change of requirements is mentioned explicitly
   - you want to design a system that explicitly supports this arbitrary queries
 
-#### gRPC = Protobufs + Servies
+#### gRPC = Protobufs + Services
+
+- Protobufs:
+  - Declare an object/schema, and this object is transformed/serialized into binary representations
+
+```js
+// declaring protobuf, the schema of the request
+message User {
+  string id = 1;
+  string name = 2;
+}
+
+// 40 bytes
+{
+  "id": "123",
+  "name":"John Doe",
+}
+
+// 15 bytes = proto buffer representation
+0A 03 32 33 12 08 ...
+```
+
+- Makes the serialization and deserialization of data simpler
+- gRPC services can be up to 10x faster and more efficient than REST
+
+gRPC service
+
+```js
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+service UserService {
+  rpc GetUser (GetUserRequest) return (GetUserResponse);
+}
+```
+
+- gRPC is useful for:
+  - operating microservices at scale
+    - client-side load balancing
+    - streaming
+    - rudimentary authentication
+
+- gRPC is how google builds services internally
+  - gRPC is great for building internal services
+  - on interviews, bring it up only if you have the need to clearly optimize for performance
+
+##### Problems with gRPC
+
+- clients don't support it natively
+  - browsers don't support it
+- operating with binary in between services is really efficient for servers, not for humans though
+  - harder debugging
+
+#### Server Sent Events (SSE)
+
+- Previously we were talking mainly about requests/responses
+  - vast majority of applications
+- However, some applications we might want to push data to the user
+  - notifications
+  - sensitive updates
+    - stock change
+  - we could use polling, however:
+    - data is stale until polling is called
+    - sometimes there might not be updates, and we're polling
+
+- SSE (Server Sent Events): it's basically HTTP, with formmating differences
+  - SSE we include headers in the response (chunked encoding, timestamps)
+  - SSE uses new lines for parsing
+
+- It's built on top of HTTP, and as default of HTTP, the connection is closed after a while. So, SSE "reconnects" on this period
+  - Responses are periodically disconnected and then re-enabled
+
+- Allows longer running requests
