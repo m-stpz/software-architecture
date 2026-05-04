@@ -207,4 +207,43 @@ service UserService {
 - It's built on top of HTTP, and as default of HTTP, the connection is closed after a while. So, SSE "reconnects" on this period
   - Responses are periodically disconnected and then re-enabled
 
-- Allows longer running requests
+- Allows longer running requests, however, it's unidirectional
+  - Server is sending requests to the client continuously
+  - What if we need it to be bidirectional?
+    - clients send constantly and servers send constantly?
+    - then, it enters web sockets
+
+#### Web Sockets
+
+- High frequency updates and bidirectional communication
+- Powerful, but require a lot of infra
+  - Before resourcing to web sockets, verify whether a polling or sse solution wouldn't solve it
+- How do they work?
+  - "Simulate" a gRPC connection, but making it accessible for browsers/other clients
+  - offer bidirectional, low-latency streaming
+
+```
+wss:// /tickers
+
+received:
+{
+  msgType:"tickerUpdate",
+  ticker: "abc",
+  valueInCents: 10,
+}
+
+sent:
+{
+  action: "subscribe",
+  ticker: "abc"
+}
+
+{
+  action: "unsubscribe",
+  ticker: "abc"
+}
+```
+
+- When designing it, we usually talk about API in terms of messages that we're sending
+  - receive / send
+- Usually in system design, we want to minimize statefulness, but websockets are inherently stateful
