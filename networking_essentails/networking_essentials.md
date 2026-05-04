@@ -247,3 +247,25 @@ sent:
 - When designing it, we usually talk about API in terms of messages that we're sending
   - receive / send
 - Usually in system design, we want to minimize statefulness, but websockets are inherently stateful
+
+#### WebRTC
+
+- Runs on UDP, not on TCP
+- Used for: collaborative editors or audio/video connections between clients
+- peer-to-peer connection
+- on a design, you use if you're doing video/audio calling
+  - or collaborative editors
+  - CRDT (Conflict-free Replicate Data Types)
+
+##### How it works
+
+1. Clients connect to `signaling server` (centralized knowledge of connected clients)
+2. Clients connection to a STUN server (allows clients to connect to each other)
+3. Once the clients are connected, they can exchange data through UDP
+
+### Summary OSI Model
+
+- websockets and sse: streaming applications
+- grpc: high-performance backend
+- graphql: flexible-frontend
+- Rest APIs: jack of all trades
