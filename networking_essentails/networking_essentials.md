@@ -269,3 +269,64 @@ sent:
 - grpc: high-performance backend
 - graphql: flexible-frontend
 - Rest APIs: jack of all trades
+
+## Scaling
+
+- How can you design a system that works with a lot of users/data?
+  - vertical: bigger
+    - try vertical before horizontal
+    - servers have terabytes of memory nowadays
+  - horizontal: more servers
+    - this is usually expected to talk about
+    - load balancing
+      - spreads the load
+      - increases high availability
+
+### Load balancing
+
+They come in two flavors:
+
+- Client-side
+  - The client is aware of all the servers they can connect to
+  - They query a registry with the existence of all servers
+  - We use it when:
+    - we don't have many clients (internal facing microservices)
+      - gRPC supports it natively
+    - many clients, but can tolerate update delays (DNS)
+- Dedicated tool
+  - external clients and need to be updated quickly
+
+```
+                        / server 1
+client -> load balancer - server 2
+                        \ server 3
+              ^
+    - decides which server to route to
+```
+
+- Load balancers perform health checks on servers connected to it
+  - If the load balancer returns healthy (check can be shallow or deep), the load balancer will route traffic to it
+  - If the load balancer returns unhealthy, the load balancer will stop sending traffic to it
+
+#### Algos for load balancing
+
+1. Round robin
+
+- requests are passed to servers in sequential order
+- Assign a weight to the servers based on their capacity
+- A server with weigth 10 gets 5x more traffic than one with load 2
+
+Cons:
+
+- Doesn't take into account server load
+
+2. Least connections
+
+- load balancer keeps track of how many active connections each server has and sends a new request to the one with the fewest
+- great for "long-lived" requests (streaming/heavy db queries)
+
+Cons:
+
+- Load balancer needs to be stateful (who's doing what) which uses more CPU/memory on the balancer
+
+- Randomly allocate the requests
