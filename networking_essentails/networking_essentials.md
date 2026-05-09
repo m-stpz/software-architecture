@@ -329,4 +329,31 @@ Cons:
 
 - Load balancer needs to be stateful (who's doing what) which uses more CPU/memory on the balancer
 
-- Randomly allocate the requests
+3. IP Hash
+
+- Load balancer takes the IP address and runs a hash function to map it to a specific server
+- The same user will usually hit the same server
+
+Cons:
+
+- If server goes down and all sessions are stored on that server for given users, they lose their session
+- Also, if many users come from the same IP (e.g., a company) the server might get jammed
+
+4. Least response time
+
+- A more advanced version of least connection
+- Picks server with: fewest active connections + least average response time
+- Most efficient for user experience
+
+Cons:
+
+- Computationally expensive for a load balancer to track all those metrics in real-time
+
+5. Random (and power of two choices)
+
+- Balancer picks a/two server(s) at random. Then sends the request to the better of the two
+- Avoids the scenario where the "least busy" server gets loads of requests from load balancers at the same time
+
+Cons
+
+- Can lead to uneven distributions at small samples
