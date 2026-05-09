@@ -357,3 +357,55 @@ Cons:
 Cons
 
 - Can lead to uneven distributions at small samples
+
+#### What levels do load balancers operate at?
+
+- Layer 4 load balancer: operates at TCP level
+  - High-performance
+  - More simple
+  - Web sockets and stateful connections interact well with a l4 load balancer
+
+- Layer 7 load balancer: operates at HTTP level
+  - More expensive
+  - More "complete"
+  - The default
+
+## Regionalization
+
+- A system that works across the globe
+  - Physics must be taken into account
+  - Light an travel at a max speed in a fiber optic cable
+  - London -> NY (80ms of latency, no matter what I'm doing, simply by the laws of physics)
+
+- Uber
+  - a global system with global traffic
+  - however, drivers and users are in the same "region" (if you're in your city, likely you won't be ordering an uber from another continent/country)
+
+- Companies will normally have a data center in region of where they're operating
+  - regional db
+
+### Important principles
+
+1.  collocating your data: the core of data and processing as close as possible
+    - web server + db: need to talk quite often to send a response. This way, need to be close by
+2.  services should be as close to the users as possible
+
+## Handling failures/faults | timeouts, backoff, retries
+
+- When clients are talking to servers, we likely want them to eventually timeout
+  - timeout.duration > server.process_data() && timeout.duration < user.waiting_too_long
+- Retry: if a request fail, try again after some time
+  - This time shouldn't be specific (each 3-5s) since if different clients hit an error, they will all wait the "same" time, increasing the load on that specific moment
+  - How to avoid this?
+    1. backoff: the time between retries increases
+    - spreads the load
+    - keeps the sync of requests though
+    2. jitter
+    - randomness: for each client, add some randomness to the time for the next retry
+    - avoids syncronization
+
+> When handling failures, you want to: have timeouts and retries with exponential back off with jitter
+
+## Cascading failures
+
+- More on senior and staff level
