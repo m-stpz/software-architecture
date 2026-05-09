@@ -56,7 +56,9 @@ Cargo -> Itinerary -> Stop
 - We want quantity, not depth of analysis. Get initially broad.
   - You don't know if you have explored the space of possible solutions if you never come up with a bad idea
 
-## 1. Generate variation: create
+## Steps
+
+### 1. Generate variation: create
 
 - initially: quantity > quality
 - generate ideas, but also know when to go to action
@@ -65,7 +67,7 @@ Cargo -> Itinerary -> Stop
     - diagram
     - main words
 
-## 2. Choosing the model: select | edit
+### 2. Choosing the model: select | edit
 
 - project manager are useful here
 - what is a model?
@@ -96,3 +98,42 @@ Cargo -> Itinerary -> Stop
 
 1. domain: sphere of knowledge/activity
 2. model: system of abstractions representing selected aspects of a domain
+   - based on knowledge + assumptions about the domain
+   - some models are good for some things, other for other things
+   - models need a narrow focus
+     - completeness leads us out of the track
+     - multiple models for multiple problems within a larger domain
+     - model should be focused on a specific, difficult, important problem
+
+```
+                complex domain
+
+model 1             model 2     model 3
+- abstraction 1         ...         ...
+- abstraction 2
+```
+
+> Realism is a distraction. It doesn't give us models that we can use
+
+- Instead of asking, "which model is better?", we should ask, "which model is more useful?"
+  - but, then, useful to what?
+    - we need scenarios!
+
+3. Ubiquitous language: language structured around the domain model
+   - used by all team to connect the activities of the team with the software
+
+```
+team --> language --> software
+            |
+    structured around domain -> both software and business
+```
+
+> Focus on how talking about the problem is fundamental to finding a good solution
+
+## Concrete scenarios
+
+- Specific stories about the business
+- Some model will be more useful to given problem
+  - simpler
+  - clearer
+  - less steps
