@@ -8,11 +8,11 @@ https://www.youtube.com/watch?v=SHkbPm1Wrno
 
 | layers | name         | description                                                                 | Example                           |
 | ------ | ------------ | --------------------------------------------------------------------------- | --------------------------------- |
-| l7     | application  | Interface where user interacts with the network                             | HTTP, DNS, SMTP, FTP              |
+| l7 [*] | application  | Interface where user interacts with the network                             | HTTP, DNS, SMTP, FTP              |
 | l6     | presentation | Handles data encryption, compression, and formatting                        | SSL/TLS, JPEG, GIF                |
 | l5     | session      | Manages the "conversation" (opening/closing/restarting) between two devices | NetBIOS, RPC, Sockets             |
-| l4     | transport    | Handles the delivery and error-checking of data packets                     | TCP, UDP                          |
-| l3     | network      | Determines the best physical path for data to travel                        | IP, Routers, ICMP                 |
+| l4 [*] | transport    | Handles the delivery and error-checking of data packets                     | TCP, UDP                          |
+| l3 [*] | network      | Determines the best physical path for data to travel                        | IP, Routers, ICMP                 |
 | l2     | data link    | Transfer data between connected nodes on the network                        | Ethernet, Mac addreses, switchers |
 | l1     | physical     | Hardware, cables, electrical signals                                        | Fiber, Wifi                       |
 
@@ -409,3 +409,30 @@ Cons
 ## Cascading failures
 
 - More on senior and staff level
+- Problems in one part of the system can create problems in other parts of the system
+
+## Summary
+
+- l3: IP (public and private addresses)
+  - public: internet facing
+  - private: internal, microservices
+
+- l4: tcp/udp
+  - tcp: default
+  - udp: useful when performance is the most important, even with some data loss
+
+- l7: http/rest/gRPC/websockets/webRTC
+  - http: backbone for API protocols
+  - rest: default for API design
+    - url paths + verbs
+  - gRPC: performance
+  - graphql: flexibility
+  - websockets: enable high-frequency bidirectional communication
+  - webRTC: peer-to-peer protocol used normally for audio/video calling (can also be used for collaborative editors)
+
+- load balancing
+  - client-side load balancing: internal microservices
+    - offers great performance for a limited number of clients
+  - server-side load balancing
+    - external load balacing
+      - more clients
