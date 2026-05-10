@@ -120,7 +120,7 @@ model 1             model 2     model 3
     - we need scenarios!
 
 3. Ubiquitous language: language structured around the domain model
-   - used by all team to connect the activities of the team with the software
+   - used by all team to connect the activities of the team with the software ... within a bounded context
 
 ```
 team --> language --> software
@@ -129,6 +129,10 @@ team --> language --> software
 ```
 
 > Focus on how talking about the problem is fundamental to finding a good solution
+
+### Why model?
+
+- Critical complexity of many software projects is understanding the domain itself
 
 ## Concrete scenarios
 
