@@ -126,3 +126,17 @@ erDiagram
 - The first thing you do if you need to make data access faster, it's adding `indexing`
 - Indexing: creating data structures that help the db find data more quickly
   - Add indexes to support the most common queries
+
+### Scaling and sharding
+
+- When the data doesn't fit or it was decided to distribute it, for security/availability reasons, sharding is the solution
+  - what's the right strategy to keep related data together?
+  - always keep related data together
+
+```
+         shard 1 posts 0 - 10k
+      /
+server -  shard 2 posts 10k - 20k
+      \
+         shard 3 posts 20k - 30k
+```
