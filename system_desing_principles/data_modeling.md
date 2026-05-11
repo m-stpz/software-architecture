@@ -30,4 +30,23 @@ Hello interview delivery framework
    - Useful for cache that sits in front of the db
    - Data needs to be duplicated for many different functionalities
 4. Wide-column databases
+   - great for where there's a ton of write volume (sensors, logs)
 5. Graph db
+   - data is stored as nodes and edges
+   - avoid using it in the system talks
+
+## Schema design
+
+Three key factors:
+
+- They should have been clarified in the requirements gathering or in the API design
+
+1. Data volume: where can data live? (single db vs. distributed)
+   - where the data physically lives
+   - can the data be centered in one region or distributed?
+2. Access patterns: how is the data queried? (drives indexes vs. structure)
+   - how the data is queried
+   - cached vs non-cached
+3. Consistency requirements: how strict? (ACID vs eventual consistency)
+   - strong consistency: financial transactions
+   - weak consistency: a blog
