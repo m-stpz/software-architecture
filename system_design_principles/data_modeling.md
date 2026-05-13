@@ -140,6 +140,3 @@ server -  shard 2 posts 10k - 20k
       \
          shard 3 posts 20k - 30k
 ```
-
-<!-- 27:35 -->
-<!-- https://www.youtube.com/watch?v=TUcPS6dsWx4 -->
